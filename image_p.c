@@ -133,8 +133,9 @@ int main(int argc,char** argv){
     destImage.height=srcImage.height;
     destImage.width=srcImage.width;
     destImage.data=malloc(sizeof(uint8_t)*destImage.width*destImage.bpp*destImage.height);
-     
-    for(int i=0; i<nThreads; i++) {
+    
+    int i;
+    for(i=0; i<nThreads; i++) {
         struct arg_struct *args = malloc(sizeof(struct arg_struct));
         args->srcImage = &srcImage;
         args->destImage = &destImage;
@@ -142,7 +143,7 @@ int main(int argc,char** argv){
         args->rank = i;
         pthread_create( &thread_id[i], NULL, convolute, args );
     }
-    for(int i=0; i<nThreads; i++) {
+    for(i=0; i<nThreads; i++) {
         pthread_join( thread_id[i], NULL );
     }
     free(thread_id);

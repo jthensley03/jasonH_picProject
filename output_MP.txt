@@ -1,0 +1,7 @@
+Script started on Wed Apr 19 18:36:26 2023
+]0;jasonh@r1n00.darwin:~/jasonH_picProject[?1034h[jasonh@r1n00 jasonH_picProject]$ exit[13@script output.txtexit[Ksrun ./image_MP pic1.jpg edge
+Took 6 seconds
+]0;jasonh@r1n00.darwin:~/jasonH_picProject[jasonh@r1n00 jasonH_picProject]$ srun ./image_MP pic1.jpg edgeexit[K
+exit
+
+Script done on Wed Apr 19 18:36:39 2023

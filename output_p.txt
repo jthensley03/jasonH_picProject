@@ -1,0 +1,7 @@
+Script started on Wed 19 Apr 2023 06:41:09 PM EDT
+]0;jasonh@login00.darwin:~/jasonH_picProject[?1034h[(ea-cisc372:jasonh)@login00.darwin jasonH_picProject]$ ./image_p pic1.p[Kjpg edge
+Took 6 seconds
+]0;jasonh@login00.darwin:~/jasonH_picProject[(ea-cisc372:jasonh)@login00.darwin jasonH_picProject]$ exit
+exit
+
+Script done on Wed 19 Apr 2023 06:41:39 PM EDT
