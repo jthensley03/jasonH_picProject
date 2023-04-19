@@ -77,7 +77,7 @@ void *convolute(void* vars){
     int rowMin = rowIt*rank;
     int rowMax = rowIt*(rank+1)-1;
     if(rank == nThreads){
-        rowMax += (srcImage->height)%nThreads;
+        rowMax += ((srcImage->height)%nThreads)+1;
     }
     span=srcImage->bpp*srcImage->bpp;
     for (row=rowMin;row<rowMax;row++){
@@ -145,7 +145,7 @@ int main(int argc,char** argv){
     for(int i=0; i<nThreads; i++) {
         pthread_join( thread_id[i], NULL );
     }
-    
+    free(thread_id);
     stbi_write_png("output.png",destImage.width,destImage.height,destImage.bpp,destImage.data,destImage.bpp*destImage.width);
     stbi_image_free(srcImage.data);
     
